@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from 'next'
+﻿import type { Metadata, Viewport } from 'next'
 import { Noto_Kufi_Arabic } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { LanguageProvider } from '@/lib/language-context'
@@ -11,25 +11,10 @@ const notoKufiArabic = Noto_Kufi_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: 'نوتو | قائمة الطعام',
-  description: 'منيو رقمي تفاعلي عصري',
-  generator: 'v0.app',
+  title: 'Ù†ÙˆØªÙˆ | Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø·Ø¹Ø§Ù…',
+  description: 'Ù…Ù†ÙŠÙˆ Ø±Ù‚Ù…ÙŠ ØªÙØ§Ø¹Ù„ÙŠ Ø¹ØµØ±ÙŠ',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: 'data:,',
   },
 }
 
@@ -55,3 +40,4 @@ export default function RootLayout({
     </html>
   )
 }
+
