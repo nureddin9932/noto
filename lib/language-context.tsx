@@ -38,6 +38,7 @@ interface Translations {
     sandwiches: { name: string; description: string; heroText: string }
     drinks: { name: string; description: string; heroText: string }
     desserts: { name: string; description: string; heroText: string }
+
   }
   
   // Products
@@ -56,7 +57,7 @@ const translations: Record<Language, Translations> = {
     categoryNotFound: "القسم غير موجود",
     backToHome: "العودة للرئيسية",
     price: "السعر",
-    currency: "ر.س",
+    currency: "₺",
     welcomeTitle: "أهلاً بك في نوتو",
     welcomeMessage: "اكتشف قائمتنا المميزة واستمتع بتجربة طعام لا تُنسى",
     startBrowsing: "ابدأ التصفح",
@@ -67,6 +68,7 @@ const translations: Record<Language, Translations> = {
     madeWith: "صُنع بكل",
     inSaudi: "في تركيا، الريحانية",
     allRights: "جميع الحقوق محفوظة",
+
     categories: {
       burger: { 
         name: "برجر", 
@@ -78,6 +80,8 @@ const translations: Record<Language, Translations> = {
         description: "بيتزا إيطالية أصلية بعجينة طازجة",
         heroText: "بيتزا إيطالية أصلية محضرة بعجينة طازجة يومياً مع أجود أنواع الجبن والطماطم"
       },
+      
+  
       broasted: { 
         name: "بروستد", 
         description: "دجاج بروستد مقرمش ولذيذ",
@@ -93,6 +97,8 @@ const translations: Record<Language, Translations> = {
         description: "مشروبات باردة وساخنة منعشة",
         heroText: "مشروبات منعشة وطازجة لإكمال وجبتك، من العصائر الطبيعية إلى القهوة الفاخرة"
       },
+      
+      
       desserts: { 
         name: "حلويات", 
         description: "أشهى الحلويات الشرقية والغربية",
@@ -100,22 +106,33 @@ const translations: Record<Language, Translations> = {
       }
     },
     products: {
-      "burger-1": { name: "برجر كلاسيك", description: "برجر لحم أنجوس طازج مع جبنة شيدر وخس وطماطم وصوص خاص" },
-      "burger-2": { name: "دبل تشيز برجر", description: "شريحتين من لحم الأنجوس مع جبنة مزدوجة وبصل مكرمل" },
-      "burger-3": { name: "برجر دجاج مقرمش", description: "صدر دجاج مقرمش مع صوص رانش وخضروات طازجة" },
-      "burger-4": { name: "برجر مشروم", description: "برجر لحم مع مشروم سوتيه وجبنة سويسرية" },
-      "burger-5": { name: "برجر سبايسي", description: "برجر حار مع صوص هالبينو وجبنة بيبر جاك" },
+      "burger-1": { name: "لحم همبرغر", description: "برغر لحم مشوي طازج مع خس وطماطم ومخلل وصوص برغر مميز" },
+      "burger-2": { name: "موشرم همبرغر", description: "برغر لحم مع مشروم طازج وجبنة وصوص كريمي غني" },
+      "burger-3": { name: "لحم همبرغر دبل", description: "قطعتا لحم مشويتان مع جبنة وخضار طازجة وصوص خاص" },
+      "burger-4": { name: "لحم همبرغر اكسترا", description: "برغر لحم كبير مع إضافات اكسترا وجبنة وصوص غني" },
+      "burger-5": { name: "برغر زنجر", description: "فيليه دجاج زنجر مقرمش مع خس وصوص مايونيز حار" },
+      "burger-6": { name: "برغر زنجر اكسترا", description: "زنجر دجاج مع جبنة وإضافات اكسترا وصوص مميز" },
+      "burger-7": { name: "برغر دجاج", description: "برغر دجاج طري مع خس ومخلل وصوص خفيف" },
+      "burger-8": { name: "برغر دجاج دبل", description: "برغر دجاج بقطعتين مع جبنة وخضار وصوص خاص" },
       "pizza-1": { name: "مارغريتا", description: "صوص طماطم، جبنة موزاريلا طازجة، ريحان" },
       "pizza-2": { name: "بيبروني", description: "بيبروني حار مع جبنة موزاريلا وصوص طماطم" },
       "pizza-3": { name: "خضروات", description: "تشكيلة من الخضروات الطازجة مع جبنة موزاريلا" },
       "pizza-4": { name: "سوبريم", description: "لحم، دجاج، فلفل، بصل، زيتون، مشروم" },
-      "broasted-1": { name: "بروستد 3 قطع", description: "3 قطع دجاج بروستد مقرمش مع بطاطس" },
-      "broasted-2": { name: "بروستد 6 قطع", description: "6 قطع دجاج بروستد مقرمش مع بطاطس وكول سلو" },
-      "broasted-3": { name: "وجبة عائلية", description: "12 قطعة بروستد مع بطاطس كبير وسلطات" },
-      "broasted-4": { name: "ستربس دجاج", description: "قطع صدر دجاج مقرمشة مع صوص الاختيار" },
-      "sandwich-1": { name: "كلوب ساندويتش", description: "دجاج مشوي، بيكون، خس، طماطم، مايونيز" },
-      "sandwich-2": { name: "ستيك ساندويتش", description: "شرائح ستيك طرية مع فلفل وبصل مكرمل" },
-      "sandwich-3": { name: "شاورما عربي", description: "شاورما لحم أو دجاج مع مخللات وثوم" },
+      "broasted-1": { name: "وجبة بروستد", description: "وجبة دجاج بروستد مقرمش مع بطاطس وصوص جانبي" },
+      "broasted-2": { name: "وجبة جناح", description: "أجنحة دجاج متبلة ومقرمشة تقدم مع بطاطس وصوص" },
+      "broasted-3": { name: "وجبة فخاد", description: "قطع فخاذ دجاج متبلة ومقلية حتى القرمشة مع بطاطس" },
+      "broasted-4": { name: "وجبة كريسبي", description: "قطع دجاج كريسبي ذهبية مع بطاطس وصوص كريمي" },
+      "broasted-5": { name: "وجبة سبايسي حد", description: "وجبة دجاج حارة جدًا لعشاق النكهة القوية مع بطاطس" },
+      "broasted-6": { name: "وجبة اسكالوب", description: "اسكالوب دجاج مقرمش مع تتبيلة مميزة وبطاطس" },
+      "broasted-7": { name: "وجبة ناغيت", description: "قطع ناغيت دجاج ذهبية مع بطاطس وصوص غمس" },
+      "broasted-8": { name: "وجبة سوبريم", description: "وجبة دجاج سوبريم غنية بالنكهة مع بطاطس وصوص خاص" },
+      "broasted-9": { name: "وجبة كوردون بلو", description: "صدر دجاج كوردون بلو محشو بالجبنة ويقدم مع بطاطس" },
+      "sandwich-1": { name: "صندويش كريسبي خبز", description: "قطع دجاج كريسبي مقرمشة داخل خبز طازج مع صوص خاص وخضار" },
+      "sandwich-2": { name: "صندويش كريسبي صمون", description: "دجاج كريسبي بصمون طري مع خس ومخلل ومايونيز" },
+      "sandwich-3": { name: "صندويش فاهيتا", description: "شرائح دجاج فاهيتا متبلة مع فلفل ملون وبصل وصوص غني" },
+      "sandwich-4": { name: "صندويش مكسيكانو", description: "ساندويش حار بنكهة مكسيكية مع دجاج وصوص جبنة وخضار" },
+      "sandwich-5": { name: "زنجر كريب", description: "كريب محشو بقطع زنجر مقرمشة مع جبنة وصوص كريمي" },
+      "sandwich-6": { name: "صندويش سوبريم", description: "ساندويش غني بالدجاج والخضار والجبنة مع صوص السوبريم" },
       "drink-1": { name: "عصير برتقال طازج", description: "عصير برتقال طبيعي 100%" },
       "drink-2": { name: "موهيتو", description: "نعناع طازج، ليمون، سكر، صودا" },
       "drink-3": { name: "سموذي فراولة", description: "فراولة طازجة مع حليب وآيس كريم" },
@@ -123,9 +140,13 @@ const translations: Record<Language, Translations> = {
       "dessert-1": { name: "كنافة نابلسية", description: "كنافة تقليدية بالجبنة مع قطر" },
       "dessert-2": { name: "تشيز كيك", description: "تشيز كيك نيويورك كريمي" },
       "dessert-3": { name: "براوني شوكولاتة", description: "براوني دافئ مع آيس كريم فانيلا" },
-      "dessert-4": { name: "بقلاوة", description: "بقلاوة فستق تركية أصلية" }
+      "dessert-4": { name: "بقلاوة", description: "بقلاوة فستق تركية أصلية" },
+
     }
   },
+
+
+
   tr: {
     menu: "Menü",
     home: "Ana Sayfa",
@@ -135,7 +156,7 @@ const translations: Record<Language, Translations> = {
     categoryNotFound: "Kategori bulunamadı",
     backToHome: "Ana Sayfaya Dön",
     price: "Fiyat",
-    currency: "TL",
+    currency: "₺",
     welcomeTitle: "Noto'ya Hoş Geldiniz",
     welcomeMessage: "Özel menümüzü keşfedin ve unutulmaz bir yemek deneyimi yaşayın",
     startBrowsing: "Keşfetmeye Başla",
@@ -152,11 +173,14 @@ const translations: Record<Language, Translations> = {
         description: "En lezzetli taze ızgara burgerler",
         heroText: "Taze Angus etinden yapılmış en lezzetli burgerlerle çeşitli lezzetli eklemelerle keyfini çıkarın"
       },
+
       pizza: { 
         name: "Pizza", 
         description: "Taze hamurlu otantik İtalyan pizzası",
         heroText: "Her gün taze hamurla hazırlanan, en kaliteli peynir ve domates ile otantik İtalyan pizzası"
       },
+
+
       broasted: { 
         name: "Broasted", 
         description: "Çıtır ve lezzetli broasted tavuk",
@@ -172,6 +196,8 @@ const translations: Record<Language, Translations> = {
         description: "Serinletici sıcak ve soğuk içecekler",
         heroText: "Yemeğinizi tamamlamak için doğal meyve sularından premium kahveye kadar taze ve serinletici içecekler"
       },
+      
+      
       desserts: { 
         name: "Tatlılar", 
         description: "En iyi Doğu ve Batı tatlıları",
@@ -179,22 +205,33 @@ const translations: Record<Language, Translations> = {
       }
     },
     products: {
-      "burger-1": { name: "Klasik Burger", description: "Cheddar peyniri, marul, domates ve özel soslu taze Angus et burger" },
-      "burger-2": { name: "Double Cheese Burger", description: "Çift Angus et köftesi, çift peynir ve karamelize soğan" },
-      "burger-3": { name: "Çıtır Tavuk Burger", description: "Ranch sosu ve taze sebzelerle çıtır tavuk göğsü" },
-      "burger-4": { name: "Mantar Burger", description: "Sote mantar ve İsviçre peynirli et burger" },
-      "burger-5": { name: "Acılı Burger", description: "Jalapeno sosu ve pepper jack peynirli acılı burger" },
+      "burger-1": { name: "Et Hamburger", description: "Marul, domates, turşu ve özel burger soslu taze ızgara et burger" },
+      "burger-2": { name: "Mantarlı Hamburger", description: "Taze mantar, peynir ve zengin kremalı sos ile et burger" },
+      "burger-3": { name: "Double Et Hamburger", description: "İki ızgara et köftesi, peynir, taze sebze ve özel sos" },
+      "burger-4": { name: "Ekstra Et Hamburger", description: "Ekstra malzemeli, peynirli ve zengin soslu büyük et burger" },
+      "burger-5": { name: "Zinger Burger", description: "Marul ve acılı mayonez sos ile çıtır zinger tavuk fileto" },
+      "burger-6": { name: "Ekstra Zinger Burger", description: "Peynir, ekstra malzeme ve özel sos ile zinger tavuk burger" },
+      "burger-7": { name: "Tavuk Burger", description: "Marul, turşu ve hafif sos ile yumuşak tavuk burger" },
+      "burger-8": { name: "Double Tavuk Burger", description: "İki tavuk parçası, peynir, sebze ve özel sos ile tavuk burger" },
       "pizza-1": { name: "Margherita", description: "Domates sosu, taze mozzarella peyniri, fesleğen" },
       "pizza-2": { name: "Pepperoni", description: "Mozzarella peyniri ve domates soslu acılı pepperoni" },
       "pizza-3": { name: "Sebzeli", description: "Mozzarella peynirli çeşitli taze sebzeler" },
       "pizza-4": { name: "Supreme", description: "Et, tavuk, biber, soğan, zeytin, mantar" },
-      "broasted-1": { name: "3 Parça Broasted", description: "Patates kızartması ile 3 çıtır broasted tavuk parçası" },
-      "broasted-2": { name: "6 Parça Broasted", description: "Patates kızartması ve coleslaw ile 6 çıtır broasted tavuk parçası" },
-      "broasted-3": { name: "Aile Menüsü", description: "Büyük patates kızartması ve salatalarla 12 broasted parça" },
-      "broasted-4": { name: "Tavuk Şeritler", description: "Tercih edilen sosla çıtır tavuk göğsü şeritleri" },
-      "sandwich-1": { name: "Club Sandviç", description: "Izgara tavuk, pastırma, marul, domates, mayonez" },
-      "sandwich-2": { name: "Steak Sandviç", description: "Biber ve karamelize soğanlı yumuşak biftek dilimleri" },
-      "sandwich-3": { name: "Arap Şavurma", description: "Turşu ve sarımsaklı et veya tavuk şavurma" },
+      "broasted-1": { name: "Broasted Menü", description: "Patates ve yanında sos ile çıtır broasted tavuk menüsü" },
+      "broasted-2": { name: "Kanat Menü", description: "Patates ve sos ile servis edilen baharatlı çıtır tavuk kanatları" },
+      "broasted-3": { name: "But Menü", description: "Patates ile servis edilen marine edilmiş çıtır tavuk butları" },
+      "broasted-4": { name: "Crispy Menü", description: "Patates ve kremalı sos ile altın renkli crispy tavuk parçaları" },
+      "broasted-5": { name: "Ekstra Acılı Menü", description: "Patates ile birlikte sunulan çok acı tavuk menüsü" },
+      "broasted-6": { name: "Escalope Menü", description: "Özel baharatlı çıtır tavuk escalope ve patates" },
+      "broasted-7": { name: "Nugget Menü", description: "Patates ve dip sos ile altın renkli tavuk nuggetları" },
+      "broasted-8": { name: "Supreme Menü", description: "Patates ve özel sos ile zengin lezzetli supreme tavuk menüsü" },
+      "broasted-9": { name: "Cordon Bleu Menü", description: "Peynir dolgulu tavuk cordon bleu ve patates" },
+      "sandwich-1": { name: "Crispy Ekmek Sandviç", description: "Taze ekmek içinde çıtır tavuk, özel sos ve sebzeler" },
+      "sandwich-2": { name: "Crispy Somun Sandviç", description: "Yumuşak somunda çıtır tavuk, marul, turşu ve mayonez" },
+      "sandwich-3": { name: "Fajita Sandviç", description: "Marine tavuk fajita, renkli biber, soğan ve zengin sos" },
+      "sandwich-4": { name: "Mexicano Sandviç", description: "Meksika lezzetinde tavuklu, peynir soslu ve sebzeli acılı sandviç" },
+      "sandwich-5": { name: "Zinger Krep", description: "Çıtır zinger parçaları, peynir ve kremalı sosla doldurulmuş krep" },
+      "sandwich-6": { name: "Supreme Sandviç", description: "Tavuk, sebze, peynir ve supreme sos ile dolu zengin sandviç" },
       "drink-1": { name: "Taze Portakal Suyu", description: "%100 doğal portakal suyu" },
       "drink-2": { name: "Mojito", description: "Taze nane, limon, şeker, soda" },
       "drink-3": { name: "Çilek Smoothie", description: "Süt ve dondurma ile taze çilek" },
@@ -202,7 +239,8 @@ const translations: Record<Language, Translations> = {
       "dessert-1": { name: "Nablus Künefe", description: "Şerbetli geleneksel peynirli künefe" },
       "dessert-2": { name: "Cheesecake", description: "Kremalı New York cheesecake" },
       "dessert-3": { name: "Çikolatalı Brownie", description: "Vanilya dondurması ile sıcak brownie" },
-      "dessert-4": { name: "Baklava", description: "Otantik Türk fıstıklı baklava" }
+      "dessert-4": { name: "Baklava", description: "Otantik Türk fıstıklı baklava" },
+
     }
   }
 }

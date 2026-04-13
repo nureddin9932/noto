@@ -5,6 +5,12 @@ export interface Product {
   price: number;
   image: string;
   categoryId: string;
+  sizePrices?: {
+    s: number;
+    m: number;
+    l: number;
+    xl: number;
+  };
 }
 
 export interface Category {
@@ -25,14 +31,18 @@ export const categories: Category[] = [
     color: "orange",
     icon: "🍔"
   },
+
+  
   {
     id: "pizza",
     name: "بيتزا",
     description: "بيتزا إيطالية أصلية بعجينة طازجة",
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80",
+    image: "/noto.png",
     color: "red",
     icon: "🍕"
   },
+
+
   {
     id: "broasted",
     name: "بروستد",
@@ -57,6 +67,7 @@ export const categories: Category[] = [
     color: "blue",
     icon: "🥤"
   },
+
   {
     id: "desserts",
     name: "حلويات",
@@ -64,49 +75,76 @@ export const categories: Category[] = [
     image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80",
     color: "pink",
     icon: "🍰"
+    
   }
+
+
 ];
 
 export const products: Product[] = [
   // Burgers
   {
     id: "burger-1",
-    name: "برجر كلاسيك",
-    description: "برجر لحم أنجوس طازج مع جبنة شيدر وخس وطماطم وصوص خاص",
-    price: 35,
+    name: "لحم همبرغر",
+    description: "برغر لحم مشوي طازج مع خس وطماطم ومخلل وصوص برغر مميز",
+    price: 285,
     image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80",
     categoryId: "burger"
   },
   {
     id: "burger-2",
-    name: "دبل تشيز برجر",
-    description: "شريحتين من لحم الأنجوس مع جبنة مزدوجة وبصل مكرمل",
-    price: 45,
-    image: "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=800&q=80",
-    categoryId: "burger"
-  },
-  {
-    id: "burger-3",
-    name: "برجر دجاج مقرمش",
-    description: "صدر دجاج مقرمش مع صوص رانش وخضروات طازجة",
-    price: 32,
-    image: "https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=800&q=80",
-    categoryId: "burger"
-  },
-  {
-    id: "burger-4",
-    name: "برجر مشروم",
-    description: "برجر لحم مع مشروم سوتيه وجبنة سويسرية",
-    price: 42,
+    name: "موشرم همبرغر",
+    description: "برغر لحم مع مشروم طازج وجبنة وصوص كريمي غني",
+    price: 285,
     image: "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=800&q=80",
     categoryId: "burger"
   },
   {
-    id: "burger-5",
-    name: "برجر سبايسي",
-    description: "برجر حار مع صوص هالبينو وجبنة بيبر جاك",
-    price: 38,
+    id: "burger-3",
+    name: "لحم همبرغر دبل",
+    description: "قطعتا لحم مشويتان مع جبنة وخضار طازجة وصوص خاص",
+    price: 385,
+    image: "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=800&q=80",
+    categoryId: "burger"
+  },
+  {
+    id: "burger-4",
+    name: "لحم همبرغر اكسترا",
+    description: "برغر لحم كبير مع إضافات اكسترا وجبنة وصوص غني",
+    price: 450,
     image: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=800&q=80",
+    categoryId: "burger"
+  },
+  {
+    id: "burger-5",
+    name: "برغر زنجر",
+    description: "فيليه دجاج زنجر مقرمش مع خس وصوص مايونيز حار",
+    price: 260,
+    image: "https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=800&q=80",
+    categoryId: "burger"
+  },
+  {
+    id: "burger-6",
+    name: "برغر زنجر اكسترا",
+    description: "زنجر دجاج مع جبنة وإضافات اكسترا وصوص مميز",
+    price: 350,
+    image: "https://images.unsplash.com/photo-1615297928064-24977384d0da?w=800&q=80",
+    categoryId: "burger"
+  },
+  {
+    id: "burger-7",
+    name: "برغر دجاج",
+    description: "برغر دجاج طري مع خس ومخلل وصوص خفيف",
+    price: 225,
+    image: "https://images.unsplash.com/photo-1608039755401-742074f0548d?w=800&q=80",
+    categoryId: "burger"
+  },
+  {
+    id: "burger-8",
+    name: "برغر دجاج دبل",
+    description: "برغر دجاج بقطعتين مع جبنة وخضار وصوص خاص",
+    price: 285,
+    image: "https://images.unsplash.com/photo-1619881590738-a111d176d906?w=800&q=80",
     categoryId: "burger"
   },
   // Pizzas
@@ -116,7 +154,8 @@ export const products: Product[] = [
     description: "صوص طماطم، جبنة موزاريلا طازجة، ريحان",
     price: 40,
     image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&q=80",
-    categoryId: "pizza"
+    categoryId: "pizza",
+    sizePrices: { s: 30, m: 40, l: 50, xl: 60 }
   },
   {
     id: "pizza-2",
@@ -124,7 +163,8 @@ export const products: Product[] = [
     description: "بيبروني حار مع جبنة موزاريلا وصوص طماطم",
     price: 48,
     image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800&q=80",
-    categoryId: "pizza"
+    categoryId: "pizza",
+    sizePrices: { s: 38, m: 48, l: 58, xl: 68 }
   },
   {
     id: "pizza-3",
@@ -132,7 +172,8 @@ export const products: Product[] = [
     description: "تشكيلة من الخضروات الطازجة مع جبنة موزاريلا",
     price: 42,
     image: "https://images.unsplash.com/photo-1511689660979-10d2b1aada49?w=800&q=80",
-    categoryId: "pizza"
+    categoryId: "pizza",
+    sizePrices: { s: 32, m: 42, l: 52, xl: 62 }
   },
   {
     id: "pizza-4",
@@ -140,64 +181,129 @@ export const products: Product[] = [
     description: "لحم، دجاج، فلفل، بصل، زيتون، مشروم",
     price: 55,
     image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80",
-    categoryId: "pizza"
+    categoryId: "pizza",
+    sizePrices: { s: 45, m: 55, l: 65, xl: 75 }
   },
   // Broasted
   {
     id: "broasted-1",
-    name: "بروستد 3 قطع",
-    description: "3 قطع دجاج بروستد مقرمش مع بطاطس",
-    price: 28,
+    name: "وجبة بروستد",
+    description: "وجبة دجاج بروستد مقرمش مع بطاطس وصوص جانبي",
+    price: 335,
     image: "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=800&q=80",
     categoryId: "broasted"
   },
   {
     id: "broasted-2",
-    name: "بروستد 6 قطع",
-    description: "6 قطع دجاج بروستد مقرمش مع بطاطس وكول سلو",
-    price: 52,
+    name: "وجبة جناح",
+    description: "أجنحة دجاج متبلة ومقرمشة تقدم مع بطاطس وصوص",
+    price: 300,
     image: "https://images.unsplash.com/photo-1562967914-608f82629710?w=800&q=80",
     categoryId: "broasted"
   },
   {
     id: "broasted-3",
-    name: "وجبة عائلية",
-    description: "12 قطعة بروستد مع بطاطس كبير وسلطات",
-    price: 95,
+    name: "وجبة فخاد",
+    description: "قطع فخاذ دجاج متبلة ومقلية حتى القرمشة مع بطاطس",
+    price: 360,
     image: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=800&q=80",
     categoryId: "broasted"
   },
   {
     id: "broasted-4",
-    name: "ستربس دجاج",
-    description: "قطع صدر دجاج مقرمشة مع صوص الاختيار",
-    price: 32,
+    name: "وجبة كريسبي",
+    description: "قطع دجاج كريسبي ذهبية مع بطاطس وصوص كريمي",
+    price: 335,
     image: "https://images.unsplash.com/photo-1562967916-eb82221dfb92?w=800&q=80",
+    categoryId: "broasted"
+  },
+  {
+    id: "broasted-5",
+    name: "وجبة سبايسي حد",
+    description: "وجبة دجاج حارة جدًا لعشاق النكهة القوية مع بطاطس",
+    price: 335,
+    image: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=800&q=80",
+    categoryId: "broasted"
+  },
+  {
+    id: "broasted-6",
+    name: "وجبة اسكالوب",
+    description: "اسكالوب دجاج مقرمش مع تتبيلة مميزة وبطاطس",
+    price: 340,
+    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&q=80",
+    categoryId: "broasted"
+  },
+  {
+    id: "broasted-7",
+    name: "وجبة ناغيت",
+    description: "قطع ناغيت دجاج ذهبية مع بطاطس وصوص غمس",
+    price: 250,
+    image: "https://images.unsplash.com/photo-1569058242567-93de6f36f8eb?w=800&q=80",
+    categoryId: "broasted"
+  },
+  {
+    id: "broasted-8",
+    name: "وجبة سوبريم",
+    description: "وجبة دجاج سوبريم غنية بالنكهة مع بطاطس وصوص خاص",
+    price: 350,
+    image: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=800&q=80",
+    categoryId: "broasted"
+  },
+  {
+    id: "broasted-9",
+    name: "وجبة كوردون بلو",
+    description: "صدر دجاج كوردون بلو محشو بالجبنة ويقدم مع بطاطس",
+    price: 375,
+    image: "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=800&q=80",
     categoryId: "broasted"
   },
   // Sandwiches
   {
     id: "sandwich-1",
-    name: "كلوب ساندويتش",
-    description: "دجاج مشوي، بيكون، خس، طماطم، مايونيز",
-    price: 30,
-    image: "https://images.unsplash.com/photo-1553909489-cd47e0907980?w=800&q=80",
+    name: "صندويش كريسبي خبز",
+    description: "قطع دجاج كريسبي مقرمشة داخل خبز طازج مع صوص خاص وخضار",
+    price: 260,
+    image: "https://images.unsplash.com/photo-1521390188846-e2a3a97453a0?w=800&q=80",
     categoryId: "sandwiches"
   },
   {
     id: "sandwich-2",
-    name: "ستيك ساندويتش",
-    description: "شرائح ستيك طرية مع فلفل وبصل مكرمل",
-    price: 38,
-    image: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=800&q=80",
+    name: "صندويش كريسبي صمون",
+    description: "دجاج كريسبي بصمون طري مع خس ومخلل ومايونيز",
+    price: 260,
+    image: "https://images.unsplash.com/photo-1481070555726-e2fe8357725c?w=800&q=80",
     categoryId: "sandwiches"
   },
   {
     id: "sandwich-3",
-    name: "شاورما عربي",
-    description: "شاورما لحم أو دجاج مع مخللات وثوم",
-    price: 25,
-    image: "https://images.unsplash.com/photo-1561651823-34feb02250e4?w=800&q=80",
+    name: "صندويش فاهيتا",
+    description: "شرائح دجاج فاهيتا متبلة مع فلفل ملون وبصل وصوص غني",
+    price: 270,
+    image: "https://images.unsplash.com/photo-1539252554453-80ab65ce3586?w=800&q=80",
+    categoryId: "sandwiches"
+  },
+  {
+    id: "sandwich-4",
+    name: "صندويش مكسيكانو",
+    description: "ساندويش حار بنكهة مكسيكية مع دجاج وصوص جبنة وخضار",
+    price: 240,
+    image: "https://images.unsplash.com/photo-1540713434306-58505cf1b6fc?w=800&q=80",
+    categoryId: "sandwiches"
+  },
+  {
+    id: "sandwich-5",
+    name: "زنجر كريب",
+    description: "كريب محشو بقطع زنجر مقرمشة مع جبنة وصوص كريمي",
+    price: 260,
+    image: "https://images.unsplash.com/photo-1565299585323-38174c4a6471?w=800&q=80",
+    categoryId: "sandwiches"
+  },
+  {
+    id: "sandwich-6",
+    name: "صندويش سوبريم",
+    description: "ساندويش غني بالدجاج والخضار والجبنة مع صوص السوبريم",
+    price: 250,
+    image: "https://images.unsplash.com/photo-1550317138-10000687a72b?w=800&q=80",
     categoryId: "sandwiches"
   },
   // Drinks
@@ -258,6 +364,8 @@ export const products: Product[] = [
     image: "https://images.unsplash.com/photo-1564355808539-22fda35b7f49?w=800&q=80",
     categoryId: "desserts"
   },
+
+   
   {
     id: "dessert-4",
     name: "بقلاوة",

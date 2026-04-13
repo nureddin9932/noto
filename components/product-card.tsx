@@ -13,6 +13,7 @@ interface ProductCardProps {
 
 export function ProductCard({ product, index, onSelect }: ProductCardProps) {
   const { t, language } = useLanguage()
+  const isPizza = product.categoryId === "pizza"
   
   // Get translated product info
   const productTranslation = t.products[product.id]
@@ -45,9 +46,15 @@ export function ProductCard({ product, index, onSelect }: ProductCardProps) {
               {productTranslation?.description || product.description}
             </p>
             <div className="flex items-center justify-between">
-              <span className="text-lg font-bold text-primary">
-                {product.price} {t.currency}
-              </span>
+              {isPizza ? (
+                <span className="text-sm font-semibold text-primary">
+                  {language === "ar" ? "اختر الحجم" : "Boyut Sec"}
+                </span>
+              ) : (
+                <span className="text-lg font-bold text-primary">
+                  {product.price} {t.currency}
+                </span>
+              )}
             </div>
           </div>
         </div>

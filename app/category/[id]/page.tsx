@@ -10,6 +10,7 @@ import { CategoryHero } from "@/components/category-hero"
 import { CategoryNav } from "@/components/category-nav"
 import { ProductCard } from "@/components/product-card"
 import { ProductModal } from "@/components/product-modal"
+import { PizzaSizeModal } from "@/components/pizza-size-modal"
 import { getProductsByCategory, getCategoryById, type Product } from "@/lib/menu-data"
 import { useLanguage } from "@/lib/language-context"
 
@@ -82,11 +83,19 @@ export default function CategoryPage() {
       <Footer />
       
       {/* Product Modal */}
-      <ProductModal
-        product={selectedProduct}
-        open={modalOpen}
-        onOpenChange={setModalOpen}
-      />
+      {selectedProduct?.categoryId === "pizza" ? (
+        <PizzaSizeModal
+          product={selectedProduct}
+          open={modalOpen}
+          onOpenChange={setModalOpen}
+        />
+      ) : (
+        <ProductModal
+          product={selectedProduct}
+          open={modalOpen}
+          onOpenChange={setModalOpen}
+        />
+      )}
     </div>
   )
 }
