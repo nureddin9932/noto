@@ -226,7 +226,7 @@ export const products: Product[] = [
   },
   {
     id: "broasted-7",
-    name: "وجبة ناغيت",
+    name:  "/p5.png",
     description: "قطع ناغيت دجاج ذهبية مع بطاطس وصوص غمس",
     price: 250,
     image: "https://images.unsplash.com/photo-1569058242567-93de6f36f8eb?w=800&q=80",

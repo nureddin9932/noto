@@ -124,7 +124,7 @@ const translations: Record<Language, Translations> = {
       "broasted-4": { name: "وجبة كريسبي", description: " قطع دجاج مقرمش 5 + بطاطا + صوصات " },
       "broasted-5": { name: "وجبة سبايسي حد", description: "  قطع دجاج حد 5 +بطاطا +صوصات " },
       "broasted-6": { name: "وجبة اسكالوب", description: "اسكالوب دجاج مقرمش مع تتبيلة مميزة وبطاطس" },
-      "broasted-7": { name: "وجبة ناغيت", description: "قطع ناغيت دجاج ذهبية مع بطاطس وصوص غمس" },
+      "broasted-7": { name: "وجبة ناغيت", description: "قطع دجاج 10  +بطاطا +صوصات" },
       "broasted-8": { name: "وجبة سوبريم", description: "وجبة دجاج سوبريم غنية بالنكهة مع بطاطس وصوص خاص" },
       "broasted-9": { name: "وجبة كوردون بلو", description: "صدر دجاج كوردون بلو محشو بالجبنة ويقدم مع بطاطس" },
       "sandwich-1": { name: "صندويش كريسبي خبز", description: "قطع دجاج كريسبي مقرمشة داخل خبز طازج مع صوص خاص وخضار" },
