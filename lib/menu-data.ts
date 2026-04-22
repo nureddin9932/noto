@@ -68,15 +68,6 @@ export const categories: Category[] = [
     icon: "🥤"
   },
 
-  {
-    id: "desserts",
-    name: "حلويات",
-    description: "أشهى الحلويات الشرقية والغربية",
-    image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80",
-    color: "pink",
-    icon: "🍰"
-    
-  }
 
 
 ];
@@ -188,9 +179,9 @@ export const products: Product[] = [
   {
     id: "broasted-1",
     name: "وجبة بروستد",
-    description: "وجبة دجاج بروستد مقرمش مع بطاطس وصوص جانبي",
+    description: " قطعة دجاج + كريم توم+بطاطس  + صوص",
     price: 335,
-    image: "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=800&q=80",
+    image: "/p2.png",
     categoryId: "broasted"
   },
   {
@@ -198,7 +189,7 @@ export const products: Product[] = [
     name: "وجبة جناح",
     description: "أجنحة دجاج متبلة ومقرمشة تقدم مع بطاطس وصوص",
     price: 300,
-    image: "https://images.unsplash.com/photo-1562967914-608f82629710?w=800&q=80",
+    image: "/p3.png",
     categoryId: "broasted"
   },
   {
@@ -206,7 +197,7 @@ export const products: Product[] = [
     name: "وجبة فخاد",
     description: "قطع فخاذ دجاج متبلة ومقلية حتى القرمشة مع بطاطس",
     price: 360,
-    image: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=800&q=80",
+    image: "/p4.png",
     categoryId: "broasted"
   },
   {
@@ -214,7 +205,7 @@ export const products: Product[] = [
     name: "وجبة كريسبي",
     description: "قطع دجاج كريسبي ذهبية مع بطاطس وصوص كريمي",
     price: 335,
-    image: "https://images.unsplash.com/photo-1562967916-eb82221dfb92?w=800&q=80",
+    image:  "/p1.png",
     categoryId: "broasted"
   },
   {
@@ -222,7 +213,7 @@ export const products: Product[] = [
     name: "وجبة سبايسي حد",
     description: "وجبة دجاج حارة جدًا لعشاق النكهة القوية مع بطاطس",
     price: 335,
-    image: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=800&q=80",
+    image: "/p1.png",
     categoryId: "broasted"
   },
   {
